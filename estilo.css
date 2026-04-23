@@ -1,12 +1,27 @@
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
+    
     background-color: #554373;
+    height: 100%;
+    margin: 0%;
+
+    padding: 100px;
+    box-sizing: border-box;
+
 
 }
 
 #board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     background-color: rgb(177, 149, 255);
     background-image: url("./fabird.png");
+
+    border-radius: 12px;  
 }
