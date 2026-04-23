@@ -116,12 +116,15 @@ function update(){
 
     //placar
     context.fillStyle = "white";
-    context.font="45px Comic Sans MS";
+    context.font="35px Comic Sans MS";
     context.fillText(placar, 156, 50);
 
     //mostrar gameOVer (mudar para imagem dps)
     if (gameOver){
-            context.fillText("GAME OVER", 40,400)
+
+            //desenha a imagem primeiro fazendo ela fica no fundo
+            context.drawImage(gameOverImg, 0,0, board.width, board.height)
+            
 
     }
 }
