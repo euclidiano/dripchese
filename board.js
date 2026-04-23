@@ -33,7 +33,7 @@ let bottomPipeImg;
 //fisisicas
 let velocityX = -2; // velocidade de moviemento dos obstaculos para a esquerda
 let velocityY = 0; //velocidade do pulo
-let gravity = 0.2;
+let gravity = 0.22;
 
 let gameOver = false;
 let placar=  0;
@@ -71,7 +71,11 @@ window.onload = function() {
     requestAnimationFrame(update);
     setInterval(placePipes, 1500); //todo 1.5 segundos
     document.addEventListener("keydown", movePlayer);
+    document.addEventListener("mousedown", movePlayer);
+
+    
 }
+
 
 
 //atualizar(step)
@@ -117,7 +121,7 @@ function update(){
     }
 
     //placar
-    context.fillStyle = "white";
+    context.fillStyle = "#ffb93c";
     context.font="35px Comic Sans MS";
     context.fillText(placar, 156, 50);
 
@@ -171,10 +175,10 @@ function placePipes( ) {
 }
 
 function movePlayer (e) {
-    if (e.code == "Space" || e.code == "ArrowUp" || e.code == "KeyW") {
+    if (e.code == "Space" || e.code == "ArrowUp" || e.code == "KeyW" || e.button == 0) {
         //pula o qujo
         velocityY = -6;
-
+        
         if (gameOver) {
             player.y = pY;
             pipeArray = [];
